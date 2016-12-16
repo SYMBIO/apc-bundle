@@ -1,0 +1,24 @@
+{
+    "name": "symbio/apc-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a command line tasks to operate with APC (APCu) cache from the console",
+    "keywords": ["apc", "apcu", "task", "symfony"],
+    "homepage": "http://www.symbiodigital.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SYMBIO Developers",
+            "email": "dev@symbiodigital.com",
+            "homepage": "http://www.symbiodigital.com"
+        }
+    ],
+    "minimum-stability": "RC",
+    "prefer-stable": true,
+    "require": {
+        "symfony/framework-bundle": ">=2.1",
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": { "Symbio\\ApcBundle\\": "" }
+    }
+}
