@@ -1,0 +1,2 @@
+parameters:
+    symbio_apc.validator.mapping.cache.apcu.class: Symbio\ApcBundle\Validator\Mapping\Cache\ApcuCache

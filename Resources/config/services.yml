@@ -1,0 +1,6 @@
+services:
+    validator.mapping.cache.apcu:
+        class: %symbio_apc.validator.mapping.cache.apcu.class%
+        public: false
+        arguments:
+            - %validator.mapping.cache.prefix%
