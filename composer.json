@@ -18,9 +18,11 @@
         "symfony/framework-bundle": ">=2.1",
         "php": ">=5.4.0"
     },
+    "require-dev": {
+    },
+    "suggest": {
+    },
     "autoload": {
-        "psr-4": {
-            "Symbio\\ApcBundle\\": ""
-        }
+        "psr-4": { "Symbio\\ApcBundle\\": "" }
     }
 }
