@@ -46,13 +46,17 @@ Installation
               base_url:   http://localhost/ # could also be https://, or http://127.0.0.1:8000/, or any other valid URL
               web_dir:    %kernel.root_dir%/../web
 
+  4. Set Apache user write permissions to web_dir
+
+          $ chmod 775 web
+
 Usage
 =====
 
 Clear all APC/APCu cache:
 
-          $ php app/console symbio:apc:clear
-          $ php app/console symbio:apcu:clear
+      $ php app/console symbio:apc:clear
+      $ php app/console symbio:apcu:clear
 
 
 Capifony usage

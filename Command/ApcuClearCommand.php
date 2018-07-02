@@ -32,7 +32,7 @@ class ApcuClearCommand extends ContainerAwareCommand
             throw new \InvalidArgumentException(sprintf('Web dir is not writable "%s"', $webDir));
         }
 
-        $filename = 'apc-'.md5(uniqid().mt_rand(0, 9999999).php_uname()).'.php';
+        $filename = 'apcu-'.md5(uniqid().mt_rand(0, 9999999).php_uname()).'.php';
         $file = $webDir.'/'.$filename;
 
         $templateFile = __DIR__.'/../Resources/apcu_clear.template.tpl';
