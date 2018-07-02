@@ -22,11 +22,8 @@ class SymbioApcExtension extends Extension
         $loader->load('parameters.yml');
 
         $config = $processor->process($configuration->getConfigTree(), $configs);
-/*
-        $container->setParameter(self::ROOT_NAME . '.host_ip', $config['host_ip']);
-        $container->setParameter(self::ROOT_NAME . '.host_name', $config['host_name']);
-        $container->setParameter(self::ROOT_NAME . '.web_dir', $config['web_dir']);
-        $container->setParameter(self::ROOT_NAME . '.protocol', $config['protocol']);
-*/
+
+        $container->setParameter('symbio_apc.base_url', $config['base_url']);
+        $container->setParameter('symbio_apc.web_dir', $config['web_dir']);
     }
 }

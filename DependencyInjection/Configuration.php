@@ -22,12 +22,11 @@ class Configuration
     {
         $treeBuilder = new TreeBuilder();
         $treeBuilder->root(SymbioApcExtension::ROOT_NAME, 'array')
-            /*->children()
-                ->scalarNode('host_ip')->isRequired()->end()
-                ->scalarNode('host_name')->isRequired()->end()
+            ->isRequired()
+            ->children()
+                ->scalarNode('base_url')->isRequired()->end()
                 ->scalarNode('web_dir')->isRequired()->end()
-                ->enumNode('protocol')->values(array('http', 'https'))->defaultValue('http')->end()
-            ->end()*/
+            ->end()
         ->end();
 
         return $treeBuilder->buildTree();
