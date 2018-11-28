@@ -39,14 +39,19 @@ Installation
               );
           }
 
-  3. Configure `symbio_apc` service:
+  3. Add parameter with website URL:
+
+          # app/config/parameters.yml, app/config/parameters.yml.dist
+          cache.base_url: https://your.website.url
+
+  4. Configure `symbio_apc` service:
 
           # app/config/config.yml
           symbio_apc:
-              base_url:   http://localhost/ # could also be https://, or http://127.0.0.1:8000/, or any other valid URL
+              base_url:   %cache.base_url%/
               web_dir:    %kernel.root_dir%/../web
 
-  4. Set Apache user write permissions to web_dir
+  5. Set Apache user write permissions to web_dir
 
           $ chmod 775 web
 
